@@ -1,0 +1,356 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "General Sans";
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  color: white;
+}
+#minicircle {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  z-index: 99999;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+.effect {
+  width: fit-content;
+  /* background-color: red; */
+  overflow: hidden;
+}
+.effect .effectelem {
+  transform: translateY(100%);
+}
+
+#main {
+  width: 100%;
+  background-color: black;
+}
+
+#hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+}
+#nav {
+  width: 100%;
+  padding: 20px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#nav a {
+  color: white;
+  font-size: 1.125rem;
+  line-height: 42px;
+  text-decoration: none;
+}
+.menu {
+  position: relative;
+  /* font-size: 24px; */
+  cursor: pointer;
+}
+.menu::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background-color: white;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+.menu:hover::after {
+  transform: scaleX(1);
+}
+
+.heading {
+  margin-top: 60px;
+}
+.heading h1 {
+  font-size: 11vw;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: "General Sans Medium";
+  line-height: 1;
+  opacity: 0.7;
+  margin-left: 30px;
+}
+.heading #secondheading {
+  /* margin-left: 230px; */
+  padding-left: 11vw;
+  margin-top: -1.3vw;
+}
+.downright {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  /* background-color: red; */
+  width: fit-content;
+}
+.downright h5 {
+  text-align: right;
+  /* background-color: yellow; */
+}
+#smalltext {
+  font-size: 0.75rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.righttext {
+  /* margin-top: 100px; */
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  padding-top: 10vw;
+  padding-right: 50px;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  text-align: right;
+}
+.herofooter {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 3%;
+  padding: 0 2.5vw;
+}
+.herofooter a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+}
+.herofooter .arrow {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #aaaaaa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.iconset {
+  display: flex;
+  gap: 5px;
+}
+.arrow i {
+  color: black;
+}
+
+/* Second Page CSS */
+
+#secondpage {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  padding-top: 15vw;
+  padding-right: 10vw;
+  padding-left: 4vw;
+}
+
+.element {
+  width: 100%;
+  border-top: 1px solid #888;
+  padding: 3vw 1vw;
+  padding-right: 0;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.element h1 {
+  font-size: 7.5vw;
+  opacity: 0.5;
+}
+.element h5 {
+  font-weight: 100;
+  font-family: "General Sans Medium";
+  opacity: 1;
+}
+.elementlast {
+  border-bottom: 1px solid #888;
+}
+.element img {
+  /* display: none; */
+  opacity: 0;
+  height: 140%;
+  z-index: 999;
+  position: absolute;
+}
+
+/* About Section CSS */
+#about {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  padding-top: 15vw;
+  padding-left: 40vw;
+  /* padding-bottom: 10vw; */
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  gap: 70px;
+}
+#about img {
+  width: 260px;
+}
+.abouttext {
+  width: 30rem;
+}
+.abouttext h5 {
+  text-transform: uppercase;
+  opacity: 0.6;
+  margin-bottom: 3.5px;
+}
+.abouttext p {
+  line-height: 1.5;
+  margin-bottom: 30px;
+  font-size: 1.2rem;
+  margin: 0 auto;
+}
+/* #about a {
+  text-decoration: none;
+  color: white;
+} */
+/* .abouttext a {
+  padding: 10px 18px;
+  border: 1px solid white;
+  border-radius: 100px;
+} */
+#subscribe {
+  width: 100%;
+  background-color: black;
+  padding: 20px 30px;
+  padding-bottom: 12vw;
+}
+#subscribe h5 {
+  text-transform: uppercase;
+}
+#lighttext {
+  opacity: 0.6;
+  font-weight: 100;
+}
+/* FOOTER CSS */
+#footer {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 30px;
+}
+.footerleft {
+  display: flex;
+  gap: 20px;
+}
+.footerright {
+  display: flex;
+  gap: 20px;
+}
+#footer a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+.btn {
+  width: 6.5em;
+  height: 2.3em;
+  margin: 0.5em;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 0.625em;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+button:hover {
+  color: black;
+}
+
+button:after {
+  content: "";
+  background: rgb(184, 178, 178);
+  position: absolute;
+  z-index: -1;
+  left: -20%;
+  right: -20%;
+  top: 0;
+  bottom: 0;
+  transform: skewX(-45deg) scale(0, 1);
+  transition: all 0.5s;
+}
+
+button:hover:after {
+  transform: skewX(-45deg) scale(1, 1);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+@media screen and (max-width: 1000px) {
+  #about {
+    padding-top: 0;
+    padding-left: 0;
+    display: flex;
+    align-items: start;
+  }
+}
+@media screen and (max-width: 800px) {
+  #about {
+    padding-top: 0;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #footer {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
+@media (max-width: 768px) {
+  .abouttext p {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .abouttext p {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .abouttext p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 300px) {
+  .abouttext p {
+    font-size: 0.7rem;
+  }
+}
